@@ -1,0 +1,14 @@
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\bin\Debug\net9.0\Primzahlen mit Threads.exe
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\bin\Debug\net9.0\Primzahlen mit Threads.deps.json
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\bin\Debug\net9.0\Primzahlen mit Threads.runtimeconfig.json
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\bin\Debug\net9.0\Primzahlen mit Threads.dll
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\bin\Debug\net9.0\Primzahlen mit Threads.pdb
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\obj\Debug\net9.0\Primzahlen mit Threads.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\obj\Debug\net9.0\Primzahlen mit Threads.AssemblyInfoInputs.cache
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\obj\Debug\net9.0\Primzahlen mit Threads.AssemblyInfo.cs
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\obj\Debug\net9.0\Primzahlen mit Threads.csproj.CoreCompileInputs.cache
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\obj\Debug\net9.0\Primzahlen mit Threads.dll
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\obj\Debug\net9.0\refint\Primzahlen mit Threads.dll
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\obj\Debug\net9.0\Primzahlen mit Threads.pdb
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\obj\Debug\net9.0\Primzahlen mit Threads.genruntimeconfig.cache
+C:\Users\kilia\OneDrive - HTL Krems\SEW\C#\Parallelisierung\Primzahlen mit Threads\obj\Debug\net9.0\ref\Primzahlen mit Threads.dll

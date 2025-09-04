@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Primzahlen_nicht_parallel/1.0.0": {
+        "runtime": {
+          "Primzahlen_nicht_parallel.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Primzahlen_nicht_parallel/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

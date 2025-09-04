@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primzahlen_nicht_parallel", "Primzahlen_nicht_parallel\Primzahlen_nicht_parallel.csproj", "{7219E6F0-E271-4624-9E3A-5676385F21E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Threading", "Threading\Threading.csproj", "{B5EAB3BD-6FC9-44D2-8B04-84F7C98505BE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primzahlen_mit_2_Threads", "Primzahlen_mit_2_Threads\Primzahlen_mit_2_Threads.csproj", "{72E7604C-1DCD-4471-AE3A-E15C17D5DA5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primzahlen_mit_4_Threads", "Primzahlen_mit_4_Threads\Primzahlen_mit_4_Threads.csproj", "{964CC42A-4FD6-4C7A-9511-6E9F2B96E021}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7219E6F0-E271-4624-9E3A-5676385F21E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7219E6F0-E271-4624-9E3A-5676385F21E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7219E6F0-E271-4624-9E3A-5676385F21E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7219E6F0-E271-4624-9E3A-5676385F21E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5EAB3BD-6FC9-44D2-8B04-84F7C98505BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5EAB3BD-6FC9-44D2-8B04-84F7C98505BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5EAB3BD-6FC9-44D2-8B04-84F7C98505BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5EAB3BD-6FC9-44D2-8B04-84F7C98505BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72E7604C-1DCD-4471-AE3A-E15C17D5DA5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72E7604C-1DCD-4471-AE3A-E15C17D5DA5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72E7604C-1DCD-4471-AE3A-E15C17D5DA5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72E7604C-1DCD-4471-AE3A-E15C17D5DA5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{964CC42A-4FD6-4C7A-9511-6E9F2B96E021}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{964CC42A-4FD6-4C7A-9511-6E9F2B96E021}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{964CC42A-4FD6-4C7A-9511-6E9F2B96E021}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{964CC42A-4FD6-4C7A-9511-6E9F2B96E021}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
