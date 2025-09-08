@@ -15,8 +15,8 @@ class Program
         for (int i = 2; i <= max; i++)
             isPrime[i] = true;
 
-        Thread t1 = new Thread(() => SieveRange(2, 500_000_000));
-        Thread t2 = new Thread(() => SieveRange(500_000_001, max));
+        Thread t1 = new Thread(SieveRange1);
+        Thread t2 = new Thread(SieveRange2);
 
         t1.Start();
         t2.Start();
@@ -26,6 +26,16 @@ class Program
 
         sw.Stop();
         Console.WriteLine($"Berechnung fertig in {sw.ElapsedMilliseconds} ms.");
+    }
+    
+    static void SieveRange1()
+    {
+        SieveRange(2, 500_000_000);
+    }
+
+    static void SieveRange2()
+    {
+        SieveRange(500_000_001, max);
     }
 
     static void SieveRange(int start, int end)

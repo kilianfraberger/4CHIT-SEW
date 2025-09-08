@@ -14,13 +14,12 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-Macho-Repo\\Parallelisierung\\Primzahlen_mit_4_Threads\\Primzahlen_mit_4_Threads.csproj",
+      "projectUniqueName": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Parallelisierung\\Primzahlen_mit_4_Threads\\Primzahlen_mit_4_Threads.csproj",
       "projectName": "Primzahlen_mit_4_Threads",
-      "projectPath": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-Macho-Repo\\Parallelisierung\\Primzahlen_mit_4_Threads\\Primzahlen_mit_4_Threads.csproj",
+      "projectPath": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Parallelisierung\\Primzahlen_mit_4_Threads\\Primzahlen_mit_4_Threads.csproj",
       "packagesPath": "C:\\Users\\kilia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-Macho-Repo\\Parallelisierung\\Primzahlen_mit_4_Threads\\obj\\",
+      "outputPath": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Parallelisierung\\Primzahlen_mit_4_Threads\\obj\\",
       "projectStyle": "PackageReference",
-      "UsingMicrosoftNETSdk": false,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
@@ -52,7 +51,8 @@
         "enableAudit": "true",
         "auditLevel": "low",
         "auditMode": "direct"
-      }
+      },
+      "SdkAnalysisLevel": "9.0.200"
     },
     "frameworks": {
       "net9.0": {

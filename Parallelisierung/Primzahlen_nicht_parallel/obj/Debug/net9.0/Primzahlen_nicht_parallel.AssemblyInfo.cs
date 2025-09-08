@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Primzahlen_nicht_parallel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ee90fe31dc2564f3195492c138a69d99954c5993")]
 [assembly: System.Reflection.AssemblyProductAttribute("Primzahlen_nicht_parallel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Primzahlen_nicht_parallel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
