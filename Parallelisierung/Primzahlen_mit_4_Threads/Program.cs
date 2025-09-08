@@ -56,7 +56,7 @@ class Program
     }
     static void SieveRange(int start, int end)
     {
-        int limit = (int)Math.Sqrt(max);
+        int limit = (int)Math.Sqrt(end);
 
         for (int i = 2; i <= limit; i++)
         {

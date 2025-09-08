@@ -4,17 +4,17 @@ using System.Threading;
 
 class Program
 {
-    static int max = 1_000_000_000;
+    static int max = 2_000_000_000;
     static bool[] isPrime = new bool[max + 1];
 
     static void Main()
     {
-        Console.Write("Wie viele Threads verwenden? ");
+        int maxThreads = Environment.ProcessorCount;
+        Console.Write("Wie viele Threads verwenden? (1-"+maxThreads+"): ");
         int threadCount;
         if (!int.TryParse(Console.ReadLine(), out threadCount) || threadCount < 1)
             threadCount = 1;
-
-        int maxThreads = Environment.ProcessorCount;
+        
         if (threadCount > maxThreads)
             threadCount = maxThreads;
 
@@ -49,7 +49,7 @@ class Program
 
     static void SieveRange(int start, int end)
     {
-        int limit = (int)Math.Sqrt(max);
+        int limit = (int)Math.Sqrt(end);
 
         for (int i = 2; i <= limit; i++)
         {
