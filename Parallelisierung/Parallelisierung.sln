@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primzahlen_mit_2_Threads", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primzahlen_mit_4_Threads", "Primzahlen_mit_4_Threads\Primzahlen_mit_4_Threads.csproj", "{964CC42A-4FD6-4C7A-9511-6E9F2B96E021}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Primzahlen_mit_variablen_Threads", "Primzahlen_mit_variablen_Threads\Primzahlen_mit_variablen_Threads.csproj", "{992DDC86-A7AC-4FA5-80FF-E3C38F47B828}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{964CC42A-4FD6-4C7A-9511-6E9F2B96E021}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{964CC42A-4FD6-4C7A-9511-6E9F2B96E021}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{964CC42A-4FD6-4C7A-9511-6E9F2B96E021}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992DDC86-A7AC-4FA5-80FF-E3C38F47B828}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992DDC86-A7AC-4FA5-80FF-E3C38F47B828}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992DDC86-A7AC-4FA5-80FF-E3C38F47B828}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992DDC86-A7AC-4FA5-80FF-E3C38F47B828}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
