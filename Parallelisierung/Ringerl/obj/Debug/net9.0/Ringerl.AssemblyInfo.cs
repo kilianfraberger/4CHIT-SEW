@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Ringerl")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+42a0e00e0c0d939a36238bc4610fee38939d9b86")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+736a224a88e6931c3b0a388a3bc86cb0d5bdd1f1")]
 [assembly: System.Reflection.AssemblyProductAttribute("Ringerl")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Ringerl")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

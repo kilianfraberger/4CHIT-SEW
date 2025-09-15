@@ -7,12 +7,12 @@ class Program
     {
         const int threadCount = 6;
         const int rounds = 3;
+        const int startPlayer = 4;
         
         SemaphoreSlim[] semaphores = new SemaphoreSlim[threadCount];
-
         for (int i = 0; i < threadCount; i++)
         {
-            semaphores[i] = new SemaphoreSlim(i == 0 ? 1 : 0, 1);
+            semaphores[i] = new SemaphoreSlim(i == startPlayer - 1 ? 1 : 0, 1);
         }
         
         for (int i = 0; i < threadCount; i++)
