@@ -1,0 +1,15 @@
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\bin\Debug\net9.0\Ringerl.exe
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\bin\Debug\net9.0\Ringerl.deps.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\bin\Debug\net9.0\Ringerl.runtimeconfig.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\bin\Debug\net9.0\Ringerl.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\bin\Debug\net9.0\Ringerl.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\obj\Debug\net9.0\Ringerl.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\obj\Debug\net9.0\Ringerl.AssemblyInfoInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\obj\Debug\net9.0\Ringerl.AssemblyInfo.cs
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\obj\Debug\net9.0\Ringerl.csproj.CoreCompileInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\obj\Debug\net9.0\Ringerl.sourcelink.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\obj\Debug\net9.0\Ringerl.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\obj\Debug\net9.0\refint\Ringerl.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\obj\Debug\net9.0\Ringerl.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\obj\Debug\net9.0\Ringerl.genruntimeconfig.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Ringerl\obj\Debug\net9.0\ref\Ringerl.dll

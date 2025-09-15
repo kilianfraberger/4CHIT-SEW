@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "PingPong_Lock/1.0.0": {
+        "runtime": {
+          "PingPong_Lock.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PingPong_Lock/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

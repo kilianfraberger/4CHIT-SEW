@@ -4,7 +4,7 @@ using System.Threading;
 
 class Program
 {
-    static int max = 2_000_000_000;
+    static int max = 1_000_000_000;
     static bool[] isPrime = new bool[max + 1];
 
     static void Main()
