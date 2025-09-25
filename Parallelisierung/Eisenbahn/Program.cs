@@ -8,8 +8,6 @@ class Program
     static readonly int SectionCount = 10;
     static readonly int SectionWidth = 8;
     static SemaphoreSlim[] sectionLocks = new SemaphoreSlim[SectionCount];
-    static List<Train> trains = new List<Train>();
-    static object trainsLock = new object();
     static object consoleLock = new object();
     static Random rand = new Random();
 
@@ -21,14 +19,14 @@ class Program
         for (int i = 0; i < SectionCount; i++)
             sectionLocks[i] = new SemaphoreSlim(1, 1);
 
-        // Gleis einmal zeichnen
+
         Console.SetCursorPosition(0, 0);
         Console.WriteLine(new string('=', SectionCount * SectionWidth));
 
         new Thread(InputThread) { IsBackground = true }.Start();
 
         Console.CursorVisible = false;
-        // Statusanzeige in den unteren Zeilen
+
         while (true)
         {
             lock (consoleLock)
@@ -47,7 +45,7 @@ class Program
                         Console.SetCursorPosition(0, line++);
                         WriteLineFixed(status);
                     }
-                }
+                } 
             }
 
             Thread.Sleep(150);
@@ -64,35 +62,13 @@ class Program
                 int len = rand.Next(1, 7);
                 int id = Interlocked.Increment(ref trainCounter);
                 var train = new Train(id, len);
-                lock (trainsLock) trains.Add(train);
                 lock (trainStatus) trainStatus[id] = $"Train {id}({len}) waiting to start";
                 new Thread(train.Run) { IsBackground = true }.Start();
             }
         }
     }
 
-    static string DrawTrack()
-    {
-        StringBuilder track = new StringBuilder();
 
-        for (int i = 0; i < SectionCount * SectionWidth; i++)
-            track.Append("=");
-
-        lock (trainsLock)
-        {
-            foreach (var t in trains)
-            {
-                for (int i = 0; i < t.Length; i++)
-                {
-                    int pos = t.Position - i;
-                    if (pos >= 0 && pos < track.Length)
-                        track[pos] = '|';
-                }
-            }
-        }
-
-        return track.ToString();
-    }
 
     static string DrawSectionsLine1()
     {
@@ -126,7 +102,6 @@ class Program
 
     static void WriteLineFixed(string text)
     {
-        // komplette Zeile überschreiben
         Console.Write(text.PadRight(Console.WindowWidth));
     }
 
@@ -154,19 +129,17 @@ class Program
                 if (Position < 0 || (Position / SectionWidth) != nextSection)
                 {
                     sectionLocks[nextSection].Wait();
-                    Program.UpdateTrainStatus(Id, $"Train {Id}({Length}) entering section {nextSection + 1}");
+                    UpdateTrainStatus(Id, $"Train {Id}({Length}) entering section {nextSection + 1}");
                 }
 
                 Position = next;
-
-                // Kopf des Zugs zeichnen
+                
                 lock (consoleLock)
                 {
                     Console.SetCursorPosition(Position, 0);
                     Console.Write("|");
                 }
-
-                // Ende des Zugs löschen
+                
                 int tail = Position - Length;
                 if (tail >= 0)
                 {
@@ -185,7 +158,7 @@ class Program
                     if (tailSection != nextSection && (tail + 1) % SectionWidth == 0)
                     {
                         sectionLocks[tailSection].Release();
-                        Program.UpdateTrainStatus(Id, $"Train {Id}({Length}) releasing section {tailSection + 1}");
+                        UpdateTrainStatus(Id, $"Train {Id}({Length}) releasing section {tailSection + 1}");
                     }
                 }
             }
@@ -197,8 +170,7 @@ class Program
                 sectionLocks[s].Release();
             }
 
-            Program.UpdateTrainStatus(Id, $"Train {Id}({Length}) finished");
-            lock (trainsLock) trains.Remove(this);
+            UpdateTrainStatus(Id, $"Train {Id}({Length}) finished");
         }
     }
 }

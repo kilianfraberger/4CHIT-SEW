@@ -10,12 +10,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("Eisenbahn")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("Eisenbahn_ObserverPattern")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
 [assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d53e41952d5f1a3ea097e13994deabcd5aac72b")]
-[assembly: System.Reflection.AssemblyProductAttribute("Eisenbahn")]
-[assembly: System.Reflection.AssemblyTitleAttribute("Eisenbahn")]
+[assembly: System.Reflection.AssemblyProductAttribute("Eisenbahn_ObserverPattern")]
+[assembly: System.Reflection.AssemblyTitleAttribute("Eisenbahn_ObserverPattern")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 
 // Von der MSBuild WriteCodeFragment-Klasse generiert.
