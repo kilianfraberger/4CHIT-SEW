@@ -21,20 +21,39 @@ class Program
         for (int i = 0; i < SectionCount; i++)
             sectionLocks[i] = new SemaphoreSlim(1, 1);
 
+        // Gleis einmal zeichnen
+        Console.SetCursorPosition(0, 0);
+        Console.WriteLine(new string('=', SectionCount * SectionWidth));
+
         new Thread(InputThread) { IsBackground = true }.Start();
 
+        Console.CursorVisible = false;
+        // Statusanzeige in den unteren Zeilen
         while (true)
         {
             lock (consoleLock)
             {
-                Console.Clear();
-                DrawTrack();
-                DrawSections();
-                DrawTrainStatus();
+                int line = 2;
+                Console.SetCursorPosition(0, line++);
+                WriteLineFixed(DrawSectionsLine1());
+
+                Console.SetCursorPosition(0, line++);
+                WriteLineFixed(DrawSectionsLine2());
+
+                lock (trainStatus)
+                {
+                    foreach (var status in trainStatus.Values)
+                    {
+                        Console.SetCursorPosition(0, line++);
+                        WriteLineFixed(status);
+                    }
+                }
             }
+
             Thread.Sleep(150);
         }
     }
+
 
     static void InputThread()
     {
@@ -52,7 +71,7 @@ class Program
         }
     }
 
-    static void DrawTrack()
+    static string DrawTrack()
     {
         StringBuilder track = new StringBuilder();
 
@@ -72,34 +91,29 @@ class Program
             }
         }
 
-        Console.WriteLine(track.ToString());
+        return track.ToString();
     }
 
-    static void DrawSections()
+    static string DrawSectionsLine1()
     {
         StringBuilder line1 = new StringBuilder();
-        StringBuilder line2 = new StringBuilder();
+        for (int i = 0; i < SectionCount; i++)
+            line1.Append("|".PadRight(SectionWidth, ' '));
+        return line1.ToString();
+    }
 
+    static string DrawSectionsLine2()
+    {
+        StringBuilder line2 = new StringBuilder();
         for (int i = 0; i < SectionCount; i++)
         {
-            line1.Append("|".PadRight(SectionWidth, ' '));
             if (sectionLocks[i].CurrentCount == 0)
                 line2.Append("-".PadRight(SectionWidth, ' '));
             else
                 line2.Append("/".PadRight(SectionWidth, ' '));
         }
 
-        Console.WriteLine(line1.ToString());
-        Console.WriteLine(line2.ToString());
-    }
-
-    static void DrawTrainStatus()
-    {
-        lock (trainStatus)
-        {
-            foreach (var status in trainStatus.Values)
-                Console.WriteLine(status);
-        }
+        return line2.ToString();
     }
 
     static void UpdateTrainStatus(int id, string status)
@@ -108,6 +122,12 @@ class Program
         {
             trainStatus[id] = status;
         }
+    }
+
+    static void WriteLineFixed(string text)
+    {
+        // komplette Zeile überschreiben
+        Console.Write(text.PadRight(Console.WindowWidth));
     }
 
     class Train
@@ -138,9 +158,27 @@ class Program
                 }
 
                 Position = next;
+
+                // Kopf des Zugs zeichnen
+                lock (consoleLock)
+                {
+                    Console.SetCursorPosition(Position, 0);
+                    Console.Write("|");
+                }
+
+                // Ende des Zugs löschen
+                int tail = Position - Length;
+                if (tail >= 0)
+                {
+                    lock (consoleLock)
+                    {
+                        Console.SetCursorPosition(tail, 0);
+                        Console.Write("=");
+                    }
+                }
+
                 Thread.Sleep(200);
 
-                int tail = Position - Length;
                 if (tail >= 0)
                 {
                     int tailSection = tail / SectionWidth;
