@@ -184,8 +184,11 @@ class Program
             lock (consoleLock)
             {
                 int line = 4 + train.Id;
-                Console.SetCursorPosition(0, line);
-                Console.Write(status.PadRight(Console.WindowWidth));
+                if (line < Console.WindowHeight)
+                {
+                    Console.SetCursorPosition(0, line);
+                    Console.Write(status.PadRight(Console.WindowWidth));
+                }
             }
         }
     }

@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Eisenbahn")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7d53e41952d5f1a3ea097e13994deabcd5aac72b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5536258516864497111c49eb11ddcd8d44d837e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("Eisenbahn")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Eisenbahn")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
