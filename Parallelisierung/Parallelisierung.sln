@@ -24,6 +24,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisenbahn", "Eisenbahn\Eise
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisenbahn_ObserverPattern", "Eisenbahn_ObserverPattern\Eisenbahn_ObserverPattern.csproj", "{898ECCC7-A95A-4C6E-85C5-F36DBB6CD94F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisenbahn_Events", "Eisenbahn_Events\Eisenbahn_Events.csproj", "{5CC40D8A-CBC0-403F-9FF1-9998BA8B9B99}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -78,5 +80,9 @@ Global
 		{898ECCC7-A95A-4C6E-85C5-F36DBB6CD94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{898ECCC7-A95A-4C6E-85C5-F36DBB6CD94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{898ECCC7-A95A-4C6E-85C5-F36DBB6CD94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CC40D8A-CBC0-403F-9FF1-9998BA8B9B99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CC40D8A-CBC0-403F-9FF1-9998BA8B9B99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CC40D8A-CBC0-403F-9FF1-9998BA8B9B99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CC40D8A-CBC0-403F-9FF1-9998BA8B9B99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

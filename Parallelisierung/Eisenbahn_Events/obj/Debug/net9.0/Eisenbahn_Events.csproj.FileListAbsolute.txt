@@ -1,0 +1,15 @@
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\bin\Debug\net9.0\Eisenbahn_Events.exe
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\bin\Debug\net9.0\Eisenbahn_Events.deps.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\bin\Debug\net9.0\Eisenbahn_Events.runtimeconfig.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\bin\Debug\net9.0\Eisenbahn_Events.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\bin\Debug\net9.0\Eisenbahn_Events.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\obj\Debug\net9.0\Eisenbahn_Events.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\obj\Debug\net9.0\Eisenbahn_Events.AssemblyInfoInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\obj\Debug\net9.0\Eisenbahn_Events.AssemblyInfo.cs
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\obj\Debug\net9.0\Eisenbahn_Events.csproj.CoreCompileInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\obj\Debug\net9.0\Eisenbahn_Events.sourcelink.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\obj\Debug\net9.0\Eisenbahn_Events.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\obj\Debug\net9.0\refint\Eisenbahn_Events.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\obj\Debug\net9.0\Eisenbahn_Events.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\obj\Debug\net9.0\Eisenbahn_Events.genruntimeconfig.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_Events\obj\Debug\net9.0\ref\Eisenbahn_Events.dll
