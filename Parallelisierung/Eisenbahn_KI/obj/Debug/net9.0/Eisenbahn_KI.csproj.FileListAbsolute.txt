@@ -1,0 +1,15 @@
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\bin\Debug\net9.0\Eisenbahn_KI.exe
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\bin\Debug\net9.0\Eisenbahn_KI.deps.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\bin\Debug\net9.0\Eisenbahn_KI.runtimeconfig.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\bin\Debug\net9.0\Eisenbahn_KI.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\bin\Debug\net9.0\Eisenbahn_KI.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\obj\Debug\net9.0\Eisenbahn_KI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\obj\Debug\net9.0\Eisenbahn_KI.AssemblyInfoInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\obj\Debug\net9.0\Eisenbahn_KI.AssemblyInfo.cs
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\obj\Debug\net9.0\Eisenbahn_KI.csproj.CoreCompileInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\obj\Debug\net9.0\Eisenbahn_KI.sourcelink.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\obj\Debug\net9.0\Eisenbahn_KI.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\obj\Debug\net9.0\refint\Eisenbahn_KI.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\obj\Debug\net9.0\Eisenbahn_KI.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\obj\Debug\net9.0\Eisenbahn_KI.genruntimeconfig.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Eisenbahn_KI\obj\Debug\net9.0\ref\Eisenbahn_KI.dll
