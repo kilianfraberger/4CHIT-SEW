@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v9.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v9.0": {
+      "Sieb_des_Eratosthenes/1.0.0": {
+        "runtime": {
+          "Sieb_des_Eratosthenes.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Sieb_des_Eratosthenes/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

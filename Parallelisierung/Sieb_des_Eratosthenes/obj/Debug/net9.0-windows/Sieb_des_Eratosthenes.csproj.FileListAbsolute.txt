@@ -1,0 +1,15 @@
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\bin\Debug\net9.0-windows\Sieb_des_Eratosthenes.exe
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\bin\Debug\net9.0-windows\Sieb_des_Eratosthenes.deps.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\bin\Debug\net9.0-windows\Sieb_des_Eratosthenes.runtimeconfig.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\bin\Debug\net9.0-windows\Sieb_des_Eratosthenes.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\bin\Debug\net9.0-windows\Sieb_des_Eratosthenes.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\obj\Debug\net9.0-windows\Sieb_des_Eratosthenes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\obj\Debug\net9.0-windows\Sieb_des_Eratosthenes.AssemblyInfoInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\obj\Debug\net9.0-windows\Sieb_des_Eratosthenes.AssemblyInfo.cs
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\obj\Debug\net9.0-windows\Sieb_des_Eratosthenes.csproj.CoreCompileInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\obj\Debug\net9.0-windows\Sieb_des_Eratosthenes.sourcelink.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\obj\Debug\net9.0-windows\Sieb_des_Eratosthenes.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\obj\Debug\net9.0-windows\refint\Sieb_des_Eratosthenes.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\obj\Debug\net9.0-windows\Sieb_des_Eratosthenes.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\obj\Debug\net9.0-windows\Sieb_des_Eratosthenes.genruntimeconfig.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Sieb_des_Eratosthenes\obj\Debug\net9.0-windows\ref\Sieb_des_Eratosthenes.dll

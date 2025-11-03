@@ -28,6 +28,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisenbahn_Events", "Eisenba
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Eisenbahn_KI", "Eisenbahn_KI\Eisenbahn_KI.csproj", "{032B4235-A483-4FA8-BA1E-2B88DD00F658}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sieb_des_Eratosthenes", "Sieb_des_Eratosthenes\Sieb_des_Eratosthenes.csproj", "{14C38E33-ABAD-4470-9350-4B8E90DE44A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sieb_des_Eratosthenes_Blazor", "Sieb_des_Eratosthenes_Blazor\Sieb_des_Eratosthenes_Blazor.csproj", "{1B09C8CD-941D-45B5-A6D8-3C6EFFBD9A33}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -90,5 +94,13 @@ Global
 		{032B4235-A483-4FA8-BA1E-2B88DD00F658}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{032B4235-A483-4FA8-BA1E-2B88DD00F658}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{032B4235-A483-4FA8-BA1E-2B88DD00F658}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14C38E33-ABAD-4470-9350-4B8E90DE44A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14C38E33-ABAD-4470-9350-4B8E90DE44A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14C38E33-ABAD-4470-9350-4B8E90DE44A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14C38E33-ABAD-4470-9350-4B8E90DE44A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B09C8CD-941D-45B5-A6D8-3C6EFFBD9A33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B09C8CD-941D-45B5-A6D8-3C6EFFBD9A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B09C8CD-941D-45B5-A6D8-3C6EFFBD9A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B09C8CD-941D-45B5-A6D8-3C6EFFBD9A33}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
