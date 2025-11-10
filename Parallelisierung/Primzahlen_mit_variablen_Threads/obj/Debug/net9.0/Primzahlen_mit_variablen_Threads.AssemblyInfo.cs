@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Primzahlen_mit_variablen_Threads")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+1858cc07d299bb9fa13f07c4f01667241a81b7db")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+110ede23e5567c311a6f042cfe17561b9a29cfb5")]
 [assembly: System.Reflection.AssemblyProductAttribute("Primzahlen_mit_variablen_Threads")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Primzahlen_mit_variablen_Threads")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

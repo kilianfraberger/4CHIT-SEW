@@ -5,15 +5,9 @@
 @rendermode InteractiveServer
 
 <h3>Sieb des Eratosthenes - Blazor WebAssembly</h3>
-
-<div style="margin-bottom: 10px;">
-    <label>Input 1 (Live Mirror):</label>
-    <input @bind="Input1" class="form-control" style="width:400px;" />
-</div>
-
 <div style="margin-bottom: 20px;">
-    <label>Live Mirror:</label>
-    <input value="@Input1" readonly class="form-control" style="width:400px;" />
+    <input @bind="dummytext" @bind:event="oninput"/>
+    <label>@dummytext</label>
 </div>
 
 <div style="margin-bottom: 20px;">
@@ -26,6 +20,7 @@
     <button class="btn btn-info m-1" @onclick="RunSieveThread">Sieb mit Thread</button>
     <button class="btn btn-warning m-1" @onclick="RunSieveBackgroundWorker">Sieb BackgroundWorker</button>
     <button class="btn btn-success m-1" @onclick="RunSieveAsync">Asynchrones Sieb</button>
+    <button class="btn btn-success m-1" @onclick="RunSieveAsync2">Asynchrones Sieb2</button>
 </div>
 
 <div>
@@ -37,6 +32,7 @@
     private string Input1 { get; set; } = "";
     private int Input2 { get; set; } = 400_000_000;
     private string Output { get; set; } = "";
+    private string dummytext;
 
     private void SieveMethod(int n, out int result)
     {
@@ -53,6 +49,22 @@
         }
 
         result = isPrime.Count(x => x);
+    }
+    private async Task<int> SieveAsync(int n)
+    {
+        bool[] isPrime = new bool[n + 1];
+        for (int i = 2; i <= n; i++) isPrime[i] = true;
+
+        for (int i = 2; i * i <= n; i++)
+        {
+            if (isPrime[i])
+            {
+                for (int j = i * i; j <= n; j += i)
+                    isPrime[j] = false;
+            }
+        }
+
+        return isPrime.Count(x => x);
     }
     
     private void RunSieveSync()
@@ -101,5 +113,14 @@
         await Task.Run(() => SieveMethod(Input2, out result));
 
         Output = result.ToString();
+    }
+    private async Task RunSieveAsync2()
+    {
+        Output = " ... calculating ...";
+        StateHasChanged();
+
+        int n= await Task.Run(() => SieveAsync(Input2));
+
+        Output = n.ToString();
     }
 }

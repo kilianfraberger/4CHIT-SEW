@@ -32,6 +32,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sieb_des_Eratosthenes", "Si
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sieb_des_Eratosthenes_Blazor", "Sieb_des_Eratosthenes_Blazor\Sieb_des_Eratosthenes_Blazor.csproj", "{1B09C8CD-941D-45B5-A6D8-3C6EFFBD9A33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sieb_des_Eratosthenes_WebAssembly", "Sieb_des_Eratosthenes_WebAssembly\Sieb_des_Eratosthenes_WebAssembly.csproj", "{96036548-FFF7-44C7-8C20-00ABC24B7DA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,5 +104,9 @@ Global
 		{1B09C8CD-941D-45B5-A6D8-3C6EFFBD9A33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1B09C8CD-941D-45B5-A6D8-3C6EFFBD9A33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1B09C8CD-941D-45B5-A6D8-3C6EFFBD9A33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96036548-FFF7-44C7-8C20-00ABC24B7DA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96036548-FFF7-44C7-8C20-00ABC24B7DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96036548-FFF7-44C7-8C20-00ABC24B7DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96036548-FFF7-44C7-8C20-00ABC24B7DA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

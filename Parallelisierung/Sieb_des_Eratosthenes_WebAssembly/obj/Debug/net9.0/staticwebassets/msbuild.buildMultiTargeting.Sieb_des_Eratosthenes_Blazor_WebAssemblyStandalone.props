@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Sieb_des_Eratosthenes_Blazor_WebAssemblyStandalone.props" />
+</Project>
