@@ -34,6 +34,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sieb_des_Eratosthenes_Blazo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sieb_des_Eratosthenes_WebAssembly", "Sieb_des_Eratosthenes_WebAssembly\Sieb_des_Eratosthenes_WebAssembly.csproj", "{96036548-FFF7-44C7-8C20-00ABC24B7DA7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ThreadSynchronisation", "ThreadSynchronisation\ThreadSynchronisation.csproj", "{46ED1632-E279-4F65-8557-95CF5DAE823A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Crane_Blazor", "Crane_Blazor\Crane_Blazor.csproj", "{4FB91BFF-49CA-4DA3-9021-7087EE81B2B7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -108,5 +112,13 @@ Global
 		{96036548-FFF7-44C7-8C20-00ABC24B7DA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96036548-FFF7-44C7-8C20-00ABC24B7DA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96036548-FFF7-44C7-8C20-00ABC24B7DA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46ED1632-E279-4F65-8557-95CF5DAE823A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46ED1632-E279-4F65-8557-95CF5DAE823A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46ED1632-E279-4F65-8557-95CF5DAE823A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46ED1632-E279-4F65-8557-95CF5DAE823A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4FB91BFF-49CA-4DA3-9021-7087EE81B2B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4FB91BFF-49CA-4DA3-9021-7087EE81B2B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4FB91BFF-49CA-4DA3-9021-7087EE81B2B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4FB91BFF-49CA-4DA3-9021-7087EE81B2B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

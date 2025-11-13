@@ -1,0 +1,218 @@
+﻿@page "/"
+@using System.Threading
+@using System.Threading.Tasks
+@rendermode InteractiveServer
+
+<style>
+.factory {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    position: relative;
+    height: 300px;
+}
+
+.station {
+    border: 3px solid #888;
+    border-radius: 15px;
+    padding: 20px;
+    width: 140px;
+    height: 120px;
+    text-align: center;
+    background: linear-gradient(135deg,#444,#222);
+    color: #fff;
+    box-shadow: 0 0 15px rgba(255,255,255,0.2);
+    font-weight: bold;
+    position: relative;
+    font-size: 1.2rem;
+    top: 200px; /* Maschinen weiter runter */
+}
+
+.crane {
+    position: absolute;
+    top: 100px; /* Kran tiefer als vorher */
+    font-size: 3em;
+    transition: left 0.05s linear, top 0.05s linear;
+    z-index: 10;
+}
+
+.workpiece {
+    position: absolute;
+    font-size: 2em;
+    text-align: center;
+    border-radius: 8px;
+    transition: left 0.05s linear, top 0.05s linear, background-color 0.3s, width 0.3s, height 0.3s;
+    z-index: 5;
+}
+</style>
+
+<h3 class="text-center text-2xl font-bold mb-4">Fabrik – Parallele Bearbeitung mit Werkstück</h3>
+
+<div class="factory">
+    <div class="station" id="storage">📦 Lager</div>
+    <div class="station" id="machineA">⚙️ Maschine A</div>
+    <div class="station" id="machineB">🔩 Maschine B</div>
+</div>
+
+<div class="crane" style="@($"left: {craneX}px; top: {craneY}px;")">🏗️</div>
+
+<div class="workpiece" style="@($"left: {workpieceX}px; top: {workpieceY}px; background-color:{workpieceColor}; width:{workpieceSize}px; height:{workpieceSize}px;")">
+    🔹
+</div>
+
+<p class="mt-4 text-lg">@statusMessage</p>
+
+@code {
+    private string statusMessage = "Bereit.";
+
+    private double craneX = 460;
+    private double craneY = 100;
+
+    private double workpieceX = 460;
+    private double workpieceY = 280; 
+    private double workpieceSize = 50;
+    private string workpieceColor = "gold";
+
+    private enum WorkpieceStatus { Carried, SetDown }
+    private WorkpieceStatus wpStatus = WorkpieceStatus.SetDown;
+
+    private readonly double storageX = 460;
+    private readonly double machineAX = 860;
+    private readonly double machineBX = 1250;
+    private readonly double stationY = 280;
+    private readonly double craneCarryY = 150;
+    private SemaphoreSlim statusLock = new(1,1);
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender)
+        {
+            _ = RunFactoryLoop();
+        }
+    }
+
+    private async Task RunFactoryLoop()
+    {
+        while (true)
+        {
+            // Lager → Maschine A
+            await MoveTo(storageX);
+            await PickUpWorkpiece();
+            await MoveWithWorkpiece(machineAX);
+            await MachineAWork();
+
+            // Maschine A → Maschine B
+            await PickUpWorkpiece();
+            await MoveWithWorkpiece(machineBX);
+            await MachineBWork();
+
+            // Maschine B → Lager
+            await PickUpWorkpiece();
+            await MoveWithWorkpiece(storageX);
+            await SetWorkpieceOn(storageX, stationY);
+            await UpdateStatus("Werkstück im Lager angekommen ✅");
+            await Task.Delay(1000);
+            await ChangeWorkpieceColor("gold");
+            await UpdateStatus("Neues Werkstück aufgenommen");
+            await Task.Delay(800);
+        }
+    }
+
+    private async Task MachineAWork()
+    {
+        await UpdateStatus("MachineA: arbeitet...");
+        await SetWorkpieceOn(machineAX, stationY);
+        await Task.Delay(2000);
+        await ChangeWorkpieceColor("lightgreen");
+        await UpdateStatus("MachineA: fertig");
+        await Task.Delay(800);
+    }
+
+    private async Task MachineBWork()
+    {
+        await UpdateStatus("MachineB: arbeitet...");
+        await SetWorkpieceOn(machineBX, stationY);
+        await Task.Delay(2000);
+        await ChangeWorkpieceColor("lightblue");
+        await UpdateStatus("MachineB: fertig");
+        await Task.Delay(800);
+    }
+
+    private async Task UpdateStatus(string text)
+    {
+        await statusLock.WaitAsync();
+        try
+        {
+            statusMessage = text;
+            await InvokeAsync(StateHasChanged);
+        }
+        finally { statusLock.Release(); }
+    }
+
+    private async Task PickUpWorkpiece()
+    {
+        wpStatus = WorkpieceStatus.Carried;
+
+        double step = 5; // Pixel pro Frame
+        while (workpieceY > craneCarryY)
+        {
+            workpieceY -= step;
+            if (workpieceY < craneCarryY) workpieceY = craneCarryY; // nicht überschießen
+            workpieceX = craneX; // Werkstück über Kran halten
+            await InvokeAsync(StateHasChanged);
+            await Task.Delay(10); // kurze Pause für flüssige Bewegung
+        }
+
+        workpieceY = craneCarryY;
+        workpieceX = craneX;
+        await InvokeAsync(StateHasChanged);
+    }
+
+
+    private async Task ChangeWorkpieceColor(string color)
+    {
+        workpieceColor = color;
+    }
+
+    private async Task SetWorkpieceOn(double x, double y)
+    {
+        wpStatus = WorkpieceStatus.SetDown;
+
+        // Animationsschritte
+        double step = 5; // Pixel pro Frame
+        while (workpieceY < y)
+        {
+            workpieceY += step;
+            if (workpieceY > y) workpieceY = y; // nicht überschießen
+            workpieceX = x; // X bleibt stabil
+            await InvokeAsync(StateHasChanged);
+            await Task.Delay(10); // kurze Pause zwischen Frames für flüssige Bewegung
+        }
+
+        workpieceY = y; // sicherstellen, dass wir exakt an der Zielhöhe sind
+        workpieceX = x;
+        await InvokeAsync(StateHasChanged);
+    }
+
+
+    private async Task MoveTo(double targetX)
+    {
+        while (craneX != targetX)
+        {
+            craneX += craneX < targetX ? 5 : -5;
+            if (wpStatus == WorkpieceStatus.Carried)
+                workpieceX = craneX;
+            await InvokeAsync(StateHasChanged);
+            await Task.Delay(10);
+        }
+        craneX = targetX;
+        if (wpStatus == WorkpieceStatus.Carried)
+            workpieceX = craneX;
+        await InvokeAsync(StateHasChanged);
+    }
+
+    private async Task MoveWithWorkpiece(double targetX)
+    {
+        await MoveTo(targetX);
+    }
+}
