@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Race Condition")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+742ee9649a262239cfa81479d2f429af8c4cd9b6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ca5e3b72b67e3a53611c9636bab733d6ec851a49")]
 [assembly: System.Reflection.AssemblyProductAttribute("Race Condition")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Race Condition")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
