@@ -2,7 +2,7 @@
 //Ping Fahne ist oben
 SemaphoreSlim pong = new SemaphoreSlim(0, 1);
 //Pong Fahne ist unten
-
+bool stop = false;
 new Thread(new ThreadStart(Ping)).Start();
 new Thread(new ThreadStart(Pong)).Start();
 
@@ -15,11 +15,12 @@ void Ping()
         Console.WriteLine("ping");
         pong.Release(); //andere Fahne hinauf
     }
+    stop = true;
 }
 
 void Pong()
 {
-    while (true)
+    while (stop == false)
     {
         pong.Wait(); //eigene Fahne runter
         Console.WriteLine("pong");

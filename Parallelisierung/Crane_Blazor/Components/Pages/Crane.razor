@@ -76,11 +76,9 @@
     private enum WorkpieceStatus { Carried, SetDown }
     private WorkpieceStatus wpStatus = WorkpieceStatus.SetDown;
 
-    // FIXED Y POSITIONS
     private double groundY = 280;
     private double craneCarryY = 150;
 
-    // station animation state
     private double storageCurrentY = 280;
     private double machineACurrentY = 280;
     private double machineBCurrentY = 280;
@@ -90,38 +88,46 @@
     private readonly double machineBX = 1250;
 
     private SemaphoreSlim statusLock = new(1, 1);
+    private SemaphoreSlim machineAFinished = new(0, 1);
+    private SemaphoreSlim machineBFinished = new(0, 1);
+    private SemaphoreSlim machineASem = new(0, 1);
+    private SemaphoreSlim machineBSem = new(0, 1);
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
     {
         if (firstRender)
+        {
+            _ = MachineALoop();
+            _ = MachineBLoop();
             _ = RunFactoryLoop();
+        }
     }
 
     private async Task RunFactoryLoop()
     {
         while (true)
         {
-            // STORAGE
             await MoveTo(storageX);
             await PickUpWorkpiece();
             await MoveWithWorkpiece(machineAX);
 
-            // MACHINE A
-            await LowerToStation("A");
-            await MachineAWork();
-            await RaiseFromStation("A");
+            machineASem.Release();
+            await machineAFinished.WaitAsync();
 
             await MoveWithWorkpiece(machineBX);
 
-            // MACHINE B
-            await LowerToStation("B");
-            await MachineBWork();
-            await RaiseFromStation("B");
+            machineBSem.Release();
+            await machineBFinished.WaitAsync();
 
             await MoveWithWorkpiece(storageX);
 
-            // BACK TO STORAGE
-            await LowerToStation("S");
+            var moveTasksS = new[]
+            {
+                MoveWorkpieceDownToStationAsync("S"),
+                MoveStationUpAsync("S")
+            };
+            await Task.WhenAll(moveTasksS);
+
             await UpdateStatus("Werkstück im Lager angekommen.");
             await ChangeWorkpieceColor("gold");
             await Task.Delay(800);
@@ -129,9 +135,37 @@
         }
     }
 
-    // -------------------------
-    // MACHINE WORK
-    // -------------------------
+    private async Task MachineALoop()
+    {
+        while (true)
+        {
+            await machineASem.WaitAsync();
+            await LowerAndProcess("A", MachineAWork);
+            await RaiseFromStation("A");
+            machineAFinished.Release();
+        }
+    }
+
+    private async Task MachineBLoop()
+    {
+        while (true)
+        {
+            await machineBSem.WaitAsync();
+            await LowerAndProcess("B", MachineBWork);
+            await RaiseFromStation("B");
+            machineBFinished.Release();
+        }
+    }
+
+    private async Task LowerAndProcess(string station, Func<Task> work)
+    {
+        await Task.WhenAll(
+            MoveWorkpieceDownToStationAsync(station),
+            MoveStationUpAsync(station)
+        );
+        await work();
+    }
+
     private async Task MachineAWork()
     {
         await ChangeWorkpieceColor("lightgreen");
@@ -146,96 +180,98 @@
         await Task.Delay(1500);
     }
 
-    // -------------------------
-    // UNIVERSAL LOWER + RAISE LOGIC
-    // -------------------------
-
-    private async Task LowerToStation(string station)
+    private async Task MoveWorkpieceDownToStationAsync(string station)
     {
-        double targetX;
-        double stationY;
-        double stationLiftY;
-
-        switch (station)
-        {
-            case "A":
-                targetX = machineAX;
-                stationY = machineACurrentY;
-                break;
-            case "B":
-                targetX = machineBX;
-                stationY = machineBCurrentY;
-                break;
-            default:
-                targetX = storageX;
-                stationY = storageCurrentY;
-                break;
-        }
-
-        // midpoint where they meet
-        double meetY = (craneCarryY + stationY) / 2;
-
         double step = 4;
+        double stationY = station switch
+        {
+            "A" => machineACurrentY,
+            "B" => machineBCurrentY,
+            _ => storageCurrentY
+        };
+        double meetY = (craneCarryY + stationY) / 2;
 
         wpStatus = WorkpieceStatus.Carried;
 
-        while (workpieceY < meetY && stationY > meetY)
+        while (workpieceY < meetY)
         {
-            // Paket nach unten
             workpieceY += step;
             if (workpieceY > meetY) workpieceY = meetY;
 
-            // Station nach oben
-            stationY -= step;
-            if (stationY < meetY) stationY = meetY;
-
-            // Write back to correct station
-            if (station == "A") machineACurrentY = stationY;
-            else if (station == "B") machineBCurrentY = stationY;
-            else storageCurrentY = stationY;
-
-            workpieceX = targetX;
+            workpieceX = station switch
+            {
+                "A" => machineAX,
+                "B" => machineBX,
+                _ => storageX
+            };
 
             await InvokeAsync(StateHasChanged);
             await Task.Delay(10);
         }
 
-        // Now the workpiece is placed on the raised station
         wpStatus = WorkpieceStatus.SetDown;
         workpieceY = meetY;
-        workpieceX = targetX;
+        workpieceX = station switch
+        {
+            "A" => machineAX,
+            "B" => machineBX,
+            _ => storageX
+        };
 
         await InvokeAsync(StateHasChanged);
     }
 
+    private async Task MoveStationUpAsync(string station)
+    {
+        double step = 4;
+        double stationY = station switch
+        {
+            "A" => machineACurrentY,
+            "B" => machineBCurrentY,
+            _ => storageCurrentY
+        };
+
+        double meetY = (craneCarryY + stationY) / 2;
+
+        while (stationY > meetY)
+        {
+            stationY -= step;
+            if (stationY < meetY) stationY = meetY;
+
+            switch(station)
+            {
+                case "A": machineACurrentY = stationY; break;
+                case "B": machineBCurrentY = stationY; break;
+                default: storageCurrentY = stationY; break;
+            }
+
+            await InvokeAsync(StateHasChanged);
+            await Task.Delay(10);
+        }
+    }
+
     private async Task RaiseFromStation(string station)
     {
-        double stationY;
         double step = 4;
-
-        switch (station)
+        double stationY = station switch
         {
-            case "A": stationY = machineACurrentY; break;
-            case "B": stationY = machineBCurrentY; break;
-            default: stationY = storageCurrentY; break;
-        }
+            "A" => machineACurrentY,
+            "B" => machineBCurrentY,
+            _ => storageCurrentY
+        };
 
-        double meetY = stationY;  
         double endY = groundY;
-
         wpStatus = WorkpieceStatus.Carried;
 
         while (stationY < endY)
         {
-            // Station runter
             stationY += step;
             if (stationY > endY) stationY = endY;
 
-            // Paket hoch zum Kran
             workpieceY -= step;
             if (workpieceY < craneCarryY) workpieceY = craneCarryY;
 
-            switch (station)
+            switch(station)
             {
                 case "A": machineACurrentY = stationY; break;
                 case "B": machineBCurrentY = stationY; break;
@@ -248,36 +284,25 @@
             await Task.Delay(10);
         }
 
-        // final alignment
         workpieceY = craneCarryY;
         await InvokeAsync(StateHasChanged);
     }
-
-    // -------------------------
-    // BASIC MOVEMENT
-    // -------------------------
 
     private async Task MoveTo(double targetX)
     {
         while (craneX != targetX)
         {
             craneX += craneX < targetX ? 5 : -5;
-            if (wpStatus == WorkpieceStatus.Carried)
-                workpieceX = craneX;
+            if (wpStatus == WorkpieceStatus.Carried) workpieceX = craneX;
             await InvokeAsync(StateHasChanged);
             await Task.Delay(10);
         }
         craneX = targetX;
-        if (wpStatus == WorkpieceStatus.Carried)
-            workpieceX = craneX;
-
+        if (wpStatus == WorkpieceStatus.Carried) workpieceX = craneX;
         await InvokeAsync(StateHasChanged);
     }
 
-    private async Task MoveWithWorkpiece(double targetX)
-    {
-        await MoveTo(targetX);
-    }
+    private async Task MoveWithWorkpiece(double targetX) => await MoveTo(targetX);
 
     private async Task PickUpWorkpiece()
     {
@@ -308,4 +333,3 @@
         finally { statusLock.Release(); }
     }
 }
-
