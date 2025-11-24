@@ -1,0 +1,15 @@
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\bin\Debug\net9.0\F1Rennen.exe
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\bin\Debug\net9.0\F1Rennen.deps.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\bin\Debug\net9.0\F1Rennen.runtimeconfig.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\bin\Debug\net9.0\F1Rennen.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\bin\Debug\net9.0\F1Rennen.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\obj\Debug\net9.0\F1Rennen.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\obj\Debug\net9.0\F1Rennen.AssemblyInfoInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\obj\Debug\net9.0\F1Rennen.AssemblyInfo.cs
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\obj\Debug\net9.0\F1Rennen.csproj.CoreCompileInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\obj\Debug\net9.0\F1Rennen.sourcelink.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\obj\Debug\net9.0\F1Rennen.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\obj\Debug\net9.0\refint\F1Rennen.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\obj\Debug\net9.0\F1Rennen.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\obj\Debug\net9.0\F1Rennen.genruntimeconfig.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\F1Rennen\obj\Debug\net9.0\ref\F1Rennen.dll
