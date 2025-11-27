@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("F1Rennen")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d369ac3f4e1720fb01b54d3446b6012ddd43cb1a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7e207f118f6d1bb7b3dc44bb86335fe8954f2819")]
 [assembly: System.Reflection.AssemblyProductAttribute("F1Rennen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("F1Rennen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

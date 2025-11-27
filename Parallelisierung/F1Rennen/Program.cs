@@ -27,14 +27,12 @@ public class Car
     public void Run()
     {
         WaitForSignal();
+        readyCounter.Release();
         startSignal.Wait();
-
         Race();
-
         pitStop.Wait(); 
         TakingPitstop();
         pitStop.Release();
-
         Race();
 
         finishSemaphore.Release();
@@ -44,7 +42,6 @@ public class Car
     {
         Console.WriteLine($"{Racer}: Waiting for Start Signal");
         Thread.Sleep(rand.Next(150, 301));  
-        readyCounter.Release();
     }
 
     private void Race()
@@ -72,7 +69,8 @@ public class F1Race
     public void Run()
     {
         Car[] cars = new Car[TotalCars];
-        Thread[] threads = new Thread[TotalCars];
+
+        
 
         for (int i = 0; i < TotalCars; i++)
         {
@@ -82,9 +80,8 @@ public class F1Race
                 pitStop, 
                 readyCounter, 
                 finishSemaphore);
-
-            threads[i] = new Thread(cars[i].Run);
-            threads[i].Start();
+            
+            new Thread(cars[i].Run).Start();
         }
         
         for (int i = 0; i < TotalCars; i++)
@@ -102,8 +99,8 @@ public class F1Race
 
     private void Start()
     {
+        Thread.Sleep(rand.Next(800, 1500));
         Console.WriteLine("Start Race");
-        Thread.Sleep(rand.Next(800, 1501));
     }
 
     private void End()

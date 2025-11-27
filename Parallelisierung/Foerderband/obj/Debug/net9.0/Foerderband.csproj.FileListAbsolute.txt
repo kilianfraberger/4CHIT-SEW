@@ -1,0 +1,15 @@
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\bin\Debug\net9.0\Foerderband.exe
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\bin\Debug\net9.0\Foerderband.deps.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\bin\Debug\net9.0\Foerderband.runtimeconfig.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\bin\Debug\net9.0\Foerderband.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\bin\Debug\net9.0\Foerderband.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\obj\Debug\net9.0\Foerderband.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\obj\Debug\net9.0\Foerderband.AssemblyInfoInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\obj\Debug\net9.0\Foerderband.AssemblyInfo.cs
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\obj\Debug\net9.0\Foerderband.csproj.CoreCompileInputs.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\obj\Debug\net9.0\Foerderband.sourcelink.json
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\obj\Debug\net9.0\Foerderband.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\obj\Debug\net9.0\refint\Foerderband.dll
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\obj\Debug\net9.0\Foerderband.pdb
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\obj\Debug\net9.0\Foerderband.genruntimeconfig.cache
+C:\Users\kilia\OneDrive\Dokumente\GitHub\4CHIT-SEW\Parallelisierung\Foerderband\obj\Debug\net9.0\ref\Foerderband.dll
