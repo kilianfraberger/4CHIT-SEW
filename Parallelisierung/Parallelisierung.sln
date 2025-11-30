@@ -46,6 +46,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foerderband", "Foerderband\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TischtennisDoppel", "TischtennisDoppel\TischtennisDoppel.csproj", "{D5BAB070-4A02-4333-9894-FEC7ED2D4964}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Schirennen", "Schirennen\Schirennen.csproj", "{B1D109DE-09AF-475C-B5F4-5444BF325E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KFZWerkstatt", "KFZWerkstatt\KFZWerkstatt.csproj", "{121F0227-7FC0-42EC-BA69-C7E31F7182F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -144,5 +148,13 @@ Global
 		{D5BAB070-4A02-4333-9894-FEC7ED2D4964}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D5BAB070-4A02-4333-9894-FEC7ED2D4964}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D5BAB070-4A02-4333-9894-FEC7ED2D4964}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1D109DE-09AF-475C-B5F4-5444BF325E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1D109DE-09AF-475C-B5F4-5444BF325E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1D109DE-09AF-475C-B5F4-5444BF325E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1D109DE-09AF-475C-B5F4-5444BF325E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{121F0227-7FC0-42EC-BA69-C7E31F7182F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{121F0227-7FC0-42EC-BA69-C7E31F7182F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{121F0227-7FC0-42EC-BA69-C7E31F7182F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{121F0227-7FC0-42EC-BA69-C7E31F7182F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

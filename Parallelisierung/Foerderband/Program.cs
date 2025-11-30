@@ -54,40 +54,45 @@ public class machineB
 
 public class ConveyerBelt
 {
-    public SemaphoreSlim machineADone = new SemaphoreSlim(1);
-    public SemaphoreSlim machineBDone = new SemaphoreSlim(1);
+    public SemaphoreSlim machineADone = new SemaphoreSlim(0);
+    public SemaphoreSlim machineBDone = new SemaphoreSlim(0);
     public SemaphoreSlim machineAStart = new SemaphoreSlim(0);
     public SemaphoreSlim machineBStart = new SemaphoreSlim(0);
 
-    private bool lagerWerkStück = false;
-    private bool machineAWerkStück = false;
-    private bool machineBWerkStück = false;
-    Random rand = new Random();
+    //private bool lagerWerkStück = false;
+    //private bool machineAWerkStück = false;
+    //private bool machineBWerkStück = false;
+    //Random rand = new Random();
     public void Run()
     {
+        move();
+        machineAStart.Release();
         while (true)
         {
             machineADone.Wait();
-            machineBDone.Wait();
             move();
-            if(machineAWerkStück)
-                machineAStart.Release(); 
+            machineAStart.Release();
+            machineBStart.Release();
+            machineBDone.Wait();
+            /*if(machineAWerkStück)
+                machineAStart.Release();
             else
                 machineADone.Release();
             if(machineBWerkStück)
                 machineBStart.Release();
             else
-                machineBDone.Release();
+                machineBDone.Release();*/
         }
     }
 
     public void move()
     {
         Thread.Sleep(3000);
-        machineBWerkStück = machineAWerkStück;
-        machineAWerkStück = lagerWerkStück;
-        lagerWerkStück = rand.Next(2) == 0;
-        Console.WriteLine($"Moved Workpieces: {lagerWerkStück} -> {machineAWerkStück} -> {machineBWerkStück}");
+        //machineBWerkStück = machineAWerkStück;
+        //machineAWerkStück = lagerWerkStück;
+        //lagerWerkStück = rand.Next(2) == 0;
+        //Console.WriteLine($"Moved Workpieces: {lagerWerkStück} -> {machineAWerkStück} -> {machineBWerkStück}");
+        Console.WriteLine($"Moved Workpieces");
     }
 }
 

@@ -59,15 +59,15 @@ public class TeamB
     public SemaphoreSlim PlayerPlay=new SemaphoreSlim(0);
     private Player[] players=new Player[2];
     private TeamA a;
-    private SemaphoreSlim BallB;
+    private SemaphoreSlim BallB;3
     private SemaphoreSlim BallA;
 
     public TeamB(SemaphoreSlim BallB, SemaphoreSlim BallA)
     {
         this.BallB=BallB;
         this.BallA=BallA;
-        players[0]=new Player(PlayerPlay, "Macho");
-        players[1]=new Player(PlayerPlay, "Nigischer");
+        players[0]=new Player(PlayerPlay, "Kilian");
+        players[1]=new Player(PlayerPlay, "Manuel");
         new Thread(players[0].Run).Start();
         new Thread(players[1].Run).Start();
     }

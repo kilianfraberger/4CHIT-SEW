@@ -9,12 +9,12 @@ public class Cook
     public SemaphoreSlim BestellungFertig;         // Kunde gibt Bestellung
     public SemaphoreSlim EssenFertig;     // Essen ist fertig
 
-    public Cook(string name)
+    public Cook(string name, SemaphoreSlim KochFrei, SemaphoreSlim BestellungFertig, SemaphoreSlim EssenFertig)
     {
         Name = name;
-        KochFrei = new SemaphoreSlim(1); 
-        BestellungFertig = new SemaphoreSlim(0);
-        EssenFertig = new SemaphoreSlim(0);
+        this.KochFrei = KochFrei; 
+        this.BestellungFertig= BestellungFertig;
+        this.EssenFertig = EssenFertig;
     }
 
     public void Run()
@@ -25,13 +25,14 @@ public class Cook
             BestellungFertig.Wait();               // (2) Warten auf Bestellung
             PrepareMeal();
             EssenFertig.Release();        // (3) Essen fertig
+            Thread.Sleep(1000);
         }
     }
 
     private void PrepareMeal()
     {
         Console.WriteLine($"{Name}: cooking food...");
-        Thread.Sleep(1200);
+        Thread.Sleep(10000);
     }
 }
 
@@ -61,13 +62,14 @@ public class Cashier
             GeldDa.Wait();        // (2) Warten auf Kunden
             Confirm();
             Beleg.Release();
+            Thread.Sleep(1000);
         }
     }
 
     public void Confirm()
     {
         Console.WriteLine($"{Name}: confirming payment...");
-        Thread.Sleep(1000);
+        Thread.Sleep(5000);
         Console.WriteLine($"{Name}: Gave receipt");
     }
 }
@@ -76,15 +78,19 @@ public class Cashier
 
 public class Customer
 {
+    public SemaphoreSlim KochFrei;         // Koch ist frei
+    public SemaphoreSlim BestellungFertig;         // Kunde gibt Bestellung
+    public SemaphoreSlim EssenFertig;   
     public string Name { get; set; }
-    private Cook cook;
     private Cashier cashier;
 
-    public Customer(string name, Cook cook, Cashier cashier)
+    public Customer(string name, Cashier cashier, SemaphoreSlim KochFrei, SemaphoreSlim BestellungFertig, SemaphoreSlim EssenFertig)
     {
         Name = name;
-        this.cook = cook;
         this.cashier = cashier;
+        this.KochFrei = KochFrei; 
+        this.BestellungFertig= BestellungFertig;
+        this.EssenFertig = EssenFertig;
     }
 
     public void Run()
@@ -92,16 +98,18 @@ public class Customer
         Console.WriteLine($"{Name}: wants to order");
 
         // (1) warte auf freien Koch
-        cook.KochFrei.Wait();
+        KochFrei.Wait();
 
         // (2) gib Warteplatz frei → Bestellung abgeben
         Console.WriteLine($"{Name}: ordered");
-        cook.BestellungFertig.Release();
+        BestellungFertig.Release();
         // (3) warte auf Essen
-        cook.EssenFertig.Wait();
+        EssenFertig.Wait();
 
         Console.WriteLine($"{Name}: got food!");
-
+        Console.WriteLine($"{Name}: Goes to cashier");
+        Thread.Sleep(5000);
+        Console.WriteLine($"{Name}: Wants to pay");
         // (4) warte auf freien Cashier
         cashier.KassaFrei.Wait();
 
@@ -118,8 +126,11 @@ class Program
 {
     static void Main(string[] args)
     {
-        Cook cook1 = new Cook("Abdul");
-        Cook cook2 = new Cook("Hakan");
+        SemaphoreSlim KochFrei = new SemaphoreSlim(0);
+        SemaphoreSlim BestellungFertig = new SemaphoreSlim(0);
+        SemaphoreSlim EssenFertig = new SemaphoreSlim(0);
+        Cook cook1 = new Cook("Abdul", KochFrei, BestellungFertig, EssenFertig);
+        Cook cook2 = new Cook("Hakan", KochFrei, BestellungFertig, EssenFertig);
 
         Cashier cashier = new Cashier("Ali");
 
@@ -131,10 +142,10 @@ class Program
         // Kunden
         var customers = new Customer[]
         {
-            new Customer("Max",  cook1, cashier),
-            new Customer("Lisa", cook2, cashier),
-            new Customer("Tom",  cook1, cashier),
-            new Customer("Anna", cook2, cashier),
+            new Customer("Max", cashier, KochFrei, BestellungFertig, EssenFertig),
+            new Customer("Lisa", cashier, KochFrei, BestellungFertig, EssenFertig),
+            new Customer("Tom", cashier, KochFrei, BestellungFertig, EssenFertig),
+            new Customer("Anna", cashier, KochFrei, BestellungFertig, EssenFertig),
         };
 
         foreach (var c in customers)
