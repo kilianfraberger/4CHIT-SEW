@@ -8,9 +8,63 @@ const int ANZ = 5;
 Console.WriteLine("Server started, listening on port 2025");
 for (int i = 0; i < ANZ; i++)
 {
-    new Thread(() => HTTPFileServer()).Start();
+    new Thread(() => HTTPImageServer()).Start();
 }
 
+
+void HTTPImageServer()
+{
+    try
+    {
+        using Socket soc = lsnr.AcceptSocket();
+        Console.WriteLine($"Connected: {soc.RemoteEndPoint}");
+
+        using Stream s = new NetworkStream(soc);
+        // Wir brauchen den StreamReader nur noch, um den Request (Text) zu lesen
+        StreamReader sr = new StreamReader(s);
+        
+        string request = sr.ReadLine();
+        if (string.IsNullOrEmpty(request)) return;
+
+        Console.WriteLine($"Request: {request}");
+        var wosawü = request.Split(' ');
+        string fileName = wosawü[1].Substring(1);
+
+        if (File.Exists(fileName))
+        {
+            // 1. Datei binär einlesen
+            byte[] fileBytes = File.ReadAllBytes(fileName);
+            
+            // 2. Mime-Type bestimmen (sehr simpel gelöst)
+            string contentType = fileName.EndsWith(".jpg") ? "image/jpeg" : 
+                fileName.EndsWith(".png") ? "image/png" : "text/plain";
+
+            // 3. Header als Text vorbereiten (Header müssen immer mit \r\n enden)
+            string header = "HTTP/1.1 200 OK\r\n" +
+                            $"Content-Type: {contentType}\r\n" +
+                            $"Content-Length: {fileBytes.Length}\r\n" +
+                            "Connection: close\r\n" +
+                            "\r\n"; // Leerzeile trennt Header von Body
+
+            // 4. Header senden (als Bytes)
+            byte[] headerBytes = System.Text.Encoding.UTF8.GetBytes(header);
+            s.Write(headerBytes, 0, headerBytes.Length);
+
+            // 5. Bilddaten (Body) senden
+            s.Write(fileBytes, 0, fileBytes.Length);
+        }
+        else
+        {
+            // 404 Fehler senden, falls Datei nicht existiert
+            byte[] error = System.Text.Encoding.UTF8.GetBytes("HTTP/1.1 404 Not Found\r\n\r\nFile not found.");
+            s.Write(error, 0, error.Length);
+        }
+    }
+    catch (Exception e) 
+    {
+        Console.WriteLine($"Error: {e.Message}");
+    }
+}
 
 void HTTPFileServer()
 {

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Sockets\\Server\\Server.csproj": {}
+    "C:\\Users\\kilia\\Github\\4CHIT-SEW\\Sockets\\Server\\Server.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Sockets\\Server\\Server.csproj": {
+    "C:\\Users\\kilia\\Github\\4CHIT-SEW\\Sockets\\Server\\Server.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Sockets\\Server\\Server.csproj",
+        "projectUniqueName": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\Sockets\\Server\\Server.csproj",
         "projectName": "Server",
-        "projectPath": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Sockets\\Server\\Server.csproj",
+        "projectPath": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\Sockets\\Server\\Server.csproj",
         "packagesPath": "C:\\Users\\kilia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Sockets\\Server\\obj\\",
+        "outputPath": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\Sockets\\Server\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Sockets\\Client\\Client.csproj",
+      "projectUniqueName": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\Sockets\\Client\\Client.csproj",
       "projectName": "Client",
-      "projectPath": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Sockets\\Client\\Client.csproj",
+      "projectPath": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\Sockets\\Client\\Client.csproj",
       "packagesPath": "C:\\Users\\kilia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kilia\\OneDrive\\Dokumente\\GitHub\\4CHIT-SEW\\Sockets\\Client\\obj\\",
+      "outputPath": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\Sockets\\Client\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

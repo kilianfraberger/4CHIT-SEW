@@ -1,0 +1,15 @@
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\bin\Debug\net10.0\Server_Factory.exe
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\bin\Debug\net10.0\Server_Factory.deps.json
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\bin\Debug\net10.0\Server_Factory.runtimeconfig.json
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\bin\Debug\net10.0\Server_Factory.dll
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\bin\Debug\net10.0\Server_Factory.pdb
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\obj\Debug\net10.0\Server_Factory.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\obj\Debug\net10.0\Server_Factory.AssemblyInfoInputs.cache
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\obj\Debug\net10.0\Server_Factory.AssemblyInfo.cs
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\obj\Debug\net10.0\Server_Factory.csproj.CoreCompileInputs.cache
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\obj\Debug\net10.0\Server_Factory.sourcelink.json
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\obj\Debug\net10.0\Server_Factory.dll
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\obj\Debug\net10.0\refint\Server_Factory.dll
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\obj\Debug\net10.0\Server_Factory.pdb
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\obj\Debug\net10.0\Server_Factory.genruntimeconfig.cache
+C:\Users\kilia\Github\4CHIT-SEW\Sockets\Server_Factory\obj\Debug\net10.0\ref\Server_Factory.dll

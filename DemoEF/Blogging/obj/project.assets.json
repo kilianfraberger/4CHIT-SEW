@@ -3201,11 +3201,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\kilia\\DemoEF\\Blogging\\Blogging.csproj",
+      "projectUniqueName": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\DemoEF\\Blogging\\Blogging.csproj",
       "projectName": "Blogging",
-      "projectPath": "C:\\Users\\kilia\\DemoEF\\Blogging\\Blogging.csproj",
+      "projectPath": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\DemoEF\\Blogging\\Blogging.csproj",
       "packagesPath": "C:\\Users\\kilia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\kilia\\DemoEF\\Blogging\\obj\\",
+      "outputPath": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\DemoEF\\Blogging\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kilia\\DemoEF\\Code-First\\Code-First.csproj": {}
+    "C:\\Users\\kilia\\Github\\4CHIT-SEW\\DemoEF\\Code-First\\Code-First.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kilia\\DemoEF\\Code-First\\Code-First.csproj": {
+    "C:\\Users\\kilia\\Github\\4CHIT-SEW\\DemoEF\\Code-First\\Code-First.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kilia\\DemoEF\\Code-First\\Code-First.csproj",
+        "projectUniqueName": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\DemoEF\\Code-First\\Code-First.csproj",
         "projectName": "Code-First",
-        "projectPath": "C:\\Users\\kilia\\DemoEF\\Code-First\\Code-First.csproj",
+        "projectPath": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\DemoEF\\Code-First\\Code-First.csproj",
         "packagesPath": "C:\\Users\\kilia\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kilia\\DemoEF\\Code-First\\obj\\",
+        "outputPath": "C:\\Users\\kilia\\Github\\4CHIT-SEW\\DemoEF\\Code-First\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
