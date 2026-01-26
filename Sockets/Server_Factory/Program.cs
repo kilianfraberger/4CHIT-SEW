@@ -2,10 +2,10 @@
 using System.Net.Sockets;
 using System.Text;
 
-TcpListener lsnr = new TcpListener(IPAddress.Loopback, 2025);
+TcpListener lsnr = new TcpListener(IPAddress.Loopback, 2026);
 lsnr.Start();
 
-Console.WriteLine("Server läuft auf http://localhost:2025");
+Console.WriteLine("Server läuft auf http://localhost:2026");
 
 while (true)
 {
