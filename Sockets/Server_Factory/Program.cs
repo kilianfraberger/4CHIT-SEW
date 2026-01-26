@@ -105,6 +105,9 @@ class TextResponseFactory : ResponseFactory
     private readonly string _mime;
     public TextResponseFactory(string mime) => _mime = mime;
     public override string ContentType => _mime + "; charset=utf-8";
-
-    protected override byte[] PrepareData(string filePath) => File.ReadAllBytes(filePath);
+    protected override byte[] PrepareData(string filePath)
+    {
+        string textContent = File.ReadAllText(filePath);
+        return Encoding.UTF8.GetBytes(textContent);
+    }
 }
